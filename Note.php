@@ -251,6 +251,9 @@ SELECT now() as test;     		   返回当前的日期时间
 SELECT UNIX_TIMESTAMP(curdate());  返回当前日期的时间戳
 
 
+
+
+
 【数学函数】
 bin
 转二进制
@@ -311,6 +314,36 @@ DELETE FROM nx_user WHERE id=9;
 
 7、退回到最原始的还原点
 rollback
+
+
+
+【创建存储】
+简单的执行代码段
+\d //
+create procedure p2()
+bengin
+set @i=0;
+while @i<10 do
+insert into nx_user VALUES('',CONCAT("djkk",@i),'1'); 
+set @i = @i+1;
+end while;
+//
+
+DROP PROCEDURE p2;
+
+
+
+【触发器】修改一个表，同时另一个表也被修改
+create trigger nx_info before insert on nx_user for each row
+begin
+insert into nx_info(name) values ('',new.name,'1');
+end//
+
+\d ;
+
+
+
+
 
 
 
