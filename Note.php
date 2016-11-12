@@ -13,7 +13,6 @@ MEDIUMTEXT      0~167772150
 LONGTEXT        0~4294967295
 
 
-
 整数类型：
 TINYINT          1      0-255	 	    无符号
 SMALLINT         2      0-255 65535 	无符号
@@ -61,9 +60,6 @@ CREATE TABLE nx_info LIKE nx_user;
 INSERT INTO nx_info(username,email) SELECT username,email FROM nx_user;
 
 Oracle,DB2,SQL Server mysql ,SyBase LnFoxmix
-
-
-
 
 
 
@@ -407,8 +403,6 @@ prev
 range
 reset
 shuffle
-
-
 
 
 
